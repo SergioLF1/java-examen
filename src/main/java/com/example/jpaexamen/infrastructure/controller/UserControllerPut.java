@@ -12,13 +12,13 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping({"/user"})
+@RequestMapping({"/edit"})
 public class UserControllerPut {
     @Autowired
     UserPort userPort;
 
     //Edit
-    @PutMapping(value = "/edit/{id}")
+    @PutMapping(value = "/{id}")
     public ResponseEntity<DTOUser> updateUser(@PathVariable("id") String id, @RequestBody DTOUser dtoUser) {
         Optional<User> userData = userPort.findById(id);
         if (userData.isPresent()) {

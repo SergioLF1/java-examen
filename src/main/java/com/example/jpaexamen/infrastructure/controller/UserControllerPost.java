@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping({"/user"})
+@RequestMapping({"/add"})
 public class UserControllerPost {
     @Autowired
     UserPort userPort;
 
     //Add
-    @PostMapping("/add")
+    @PostMapping
     public User agregar(@RequestBody DTOUser dtoUser) {
         User user = new User(dtoUser);
         return userPort.save(user);
