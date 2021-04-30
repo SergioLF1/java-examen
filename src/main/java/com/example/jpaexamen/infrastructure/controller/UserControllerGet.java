@@ -14,13 +14,13 @@ import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping({"/user"})
+@RequestMapping({"/get"})
 public class UserControllerGet {
     @Autowired
     UserPort userPort;
 
     //Get All
-    @GetMapping("/get")
+    @GetMapping
     public List<DTOUser> getAllContacts() {
         List<User> list = userPort.findAll();
         List<DTOUser> list1 = new ArrayList<DTOUser>();
@@ -32,42 +32,12 @@ public class UserControllerGet {
         return list1;
     }
 
-    //Add
-    @PostMapping("/add")
-    public User agregar(@RequestBody DTOUser dtoUser) {
-        User user = new User(dtoUser);
-        return userPort.save(user);
-    }
-
     //Get by Id
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public DTOUser getOneDto(@PathVariable String id) throws Exception {
         User user = userPort.findById(id).orElseThrow(() -> new Exception("Not found"));
         DTOUser dtoUser = new DTOUser(user);
         return dtoUser;
-    }
-
-    //Delete
-    @DeleteMapping(value = "/delete/{id}")
-    public void borrarUsuarioById(@PathVariable String id) {
-        Optional<User> c = userPort.findById(id);
-        if (c.isPresent()) {
-            userPort.deleteById(id);
-        }
-    }
-
-    //Edit
-    @PutMapping(value = "/edit/{id}")
-    public ResponseEntity<DTOUser> updateUser(@PathVariable("id") String id, @RequestBody DTOUser dtoUser) {
-        Optional<User> userData = userPort.findById(id);
-        if (userData.isPresent()) {
-            User user = userData.get();
-            user.convert(dtoUser);
-            userPort.save(user);
-            return new ResponseEntity<>(dtoUser, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
     }
 
 }
