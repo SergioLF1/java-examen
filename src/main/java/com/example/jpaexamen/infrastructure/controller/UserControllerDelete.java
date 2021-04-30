@@ -19,7 +19,7 @@ public class UserControllerDelete {
     @Autowired
     UserPort userPort;
 
-    //Delete
+    //Delete by Id
     @DeleteMapping(value = "/{id}")
     public void borrarUsuarioById(@PathVariable String id) {
         Optional<User> user = userPort.findById(id);
