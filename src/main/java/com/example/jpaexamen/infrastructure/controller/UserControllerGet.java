@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,6 +39,49 @@ public class UserControllerGet {
         User user = userPort.findById(id).orElseThrow(() -> new Exception("Not found"));
         DTOUser dtoUser = new DTOUser(user);
         return dtoUser;
+    }
+/*
+    //Get by Id
+    @GetMapping("/{id}")
+    public DTOUser findWithSpecs(@PathVariable String name, @PathVariable Date fechAlta,@PathVariable String email, @PathVariable String categoria,@PathVariable String ciudad) throws Exception {
+        User user = userPort.findById(id).orElseThrow(() -> new Exception("Not found"));
+        DTOUser dtoUser = new DTOUser(user);
+        return dtoUser;
+    }
+*/
+    public String chekName(String name){
+        if (name.equalsIgnoreCase(null)){
+            return "name";
+        }
+        return name;
+    }
+
+    public boolean chekFech(Date fechAlta){
+        if (fechAlta==null){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean chekEmail(String  email){
+        if (email.equalsIgnoreCase(null)){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean chekCategoria(String  categoria){
+        if (categoria.equalsIgnoreCase(null)){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean chekCiudad(String  ciudad){
+        if (ciudad.equalsIgnoreCase(null)){
+            return false;
+        }
+        return true;
     }
 
 }

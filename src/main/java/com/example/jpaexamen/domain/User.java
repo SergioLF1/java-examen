@@ -2,9 +2,7 @@ package com.example.jpaexamen.domain;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -14,8 +12,7 @@ import java.util.Date;
 public class User {
 
     @Id
-
-    @Column
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     String id;
 
     @Column
@@ -45,12 +42,4 @@ public class User {
         comentarios = user.getComentarios();
     }
 
-    public void convert(DTOUser user) {
-        name = user.getName();
-        fechAlta = user.getFechAlta();
-        email = user.getEmail();
-        categoria = user.getCategoria();
-        ciudad = user.getCiudad();
-        comentarios = user.getComentarios();
-    }
 }
