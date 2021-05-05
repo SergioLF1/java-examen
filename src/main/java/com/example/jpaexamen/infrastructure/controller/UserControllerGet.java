@@ -63,21 +63,21 @@ public class UserControllerGet {
         return true;
     }
 
-    public boolean chekEmail(String  email){
+    public boolean chekEmail(String email){
         if (email.equalsIgnoreCase(null)){
             return false;
         }
         return true;
     }
 
-    public boolean chekCategoria(String  categoria){
+    public boolean chekCategoria(String categoria){
         if (categoria.equalsIgnoreCase(null)){
             return false;
         }
         return true;
     }
 
-    public boolean chekCiudad(String  ciudad){
+    public boolean chekCiudad(String ciudad){
         if (ciudad.equalsIgnoreCase(null)){
             return false;
         }
