@@ -13,9 +13,10 @@ public class User {
 
     @Id
     //@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     String id;
 
-    @Column
+    @Column(name = "name")
     String name;
     @Column
     Date fechAlta;
@@ -27,8 +28,7 @@ public class User {
     String ciudad;
     @Column
     String comentarios;
-
-
+    
     public User() {
     }
 
