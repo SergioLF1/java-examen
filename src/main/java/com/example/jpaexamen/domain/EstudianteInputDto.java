@@ -10,7 +10,7 @@ import java.util.Date;
 @Data
 public class EstudianteInputDto {
     @NotNull
-    @Column(name = "surname")
+    @Column(name = "surname", unique = true)
     String surname;
 
     @NotNull
