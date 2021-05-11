@@ -13,15 +13,7 @@ import java.util.Date;
 
 public class EstudianteOutputDto {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "estudiantes_seq")
-    @GenericGenerator(
-            name = "ausencias_seq",
-            strategy = "com.bosonit.staffit.shared.sequences.StringPrefixedSequenceIdGenerator",
-            parameters = {
-                    @Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
-                    @Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "EST"),
-                    @Parameter(name = StringPrefixedSequenceIdGenerator.NUMBER_FORMAT_PARAMETER, value = "%08d")
-            })
+
     @Column(name = "id")
     String id;
 
