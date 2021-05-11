@@ -2,7 +2,9 @@ package com.example.jpaexamen.domain;
 
 import lombok.Data;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Date;
 
 @Entity
@@ -28,7 +30,7 @@ public class User {
     String ciudad;
     @Column
     String comentarios;
-    
+
     public User() {
     }
 

@@ -13,13 +13,13 @@ public class EstudianteSearchInputDto {
     String company_email;
 
     @NotNull
-    String personal_email ;
+    String personal_email;
 
     @NotNull
-    String city ;
+    String city;
 
     @NotNull
-    int numHoursWeek ;
+    int numHoursWeek;
 
     String coments;
 
