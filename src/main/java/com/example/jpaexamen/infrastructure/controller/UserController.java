@@ -1,6 +1,5 @@
 package com.example.jpaexamen.infrastructure.controller;
 
-import com.example.jpaexamen.domain.DTOUser;
 import com.example.jpaexamen.domain.EstudianteInputDto;
 import com.example.jpaexamen.domain.EstudianteOutputDto;
 import com.example.jpaexamen.domain.User;
@@ -28,7 +27,7 @@ public class UserController {
         List<EstudianteOutputDto> list1 = new ArrayList<EstudianteOutputDto>();
         EstudianteOutputDto dtoUser;
         for (User user : list) {
-            dtoUser = new EstudianteOutputDto();
+            dtoUser = new EstudianteOutputDto(user);
             list1.add(dtoUser);
         }
         return list1;
@@ -45,7 +44,7 @@ public class UserController {
     @GetMapping("/get/{id}")
     public EstudianteOutputDto getOneDto(@PathVariable String id) throws Exception {
         User user = userPort.findById(id).orElseThrow(() -> new Exception("Not found"));
-        EstudianteOutputDto dtoUser = new EstudianteOutputDto();
+        EstudianteOutputDto dtoUser = new EstudianteOutputDto(user);
         return dtoUser;
     }
 

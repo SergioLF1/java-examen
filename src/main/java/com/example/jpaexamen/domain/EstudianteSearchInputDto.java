@@ -1,36 +1,20 @@
 package com.example.jpaexamen.domain;
 
-import com.sun.istack.NotNull;
+import lombok.Data;
 import org.dom4j.Branch;
 
 import java.util.Date;
 
+@Data
 public class EstudianteSearchInputDto {
-    @NotNull
     String surname;
-
-    @NotNull
     String company_email;
-
-    @NotNull
     String personal_email;
-
-    @NotNull
     String city;
-
-    @NotNull
-    int numHoursWeek;
-
+    double numHoursWeek;
     String coments;
-
-    @NotNull
     Branch branch;
-
-    @NotNull
     boolean active;
-
-    @NotNull
-    Date createdDate;
-
+    Date createDate;
     Date terminationDate;
 }

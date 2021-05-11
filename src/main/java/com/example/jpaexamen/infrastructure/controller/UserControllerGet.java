@@ -1,6 +1,5 @@
 package com.example.jpaexamen.infrastructure.controller;
 
-import com.example.jpaexamen.domain.DTOUser;
 import com.example.jpaexamen.domain.EstudianteOutputDto;
 import com.example.jpaexamen.domain.User;
 import com.example.jpaexamen.infrastructure.repository.UserPort;
@@ -25,7 +24,7 @@ public class UserControllerGet {
         List<EstudianteOutputDto> list1 = new ArrayList<EstudianteOutputDto>();
         EstudianteOutputDto dtoUser;
         for (User user : list) {
-            dtoUser = new EstudianteOutputDto();
+            dtoUser = new EstudianteOutputDto(user);
             list1.add(dtoUser);
         }
         return list1;
@@ -35,48 +34,40 @@ public class UserControllerGet {
     @GetMapping("/{id}")
     public EstudianteOutputDto getOneDto(@PathVariable String id) throws Exception {
         User user = userPort.findById(id).orElseThrow(() -> new Exception("Not found"));
-        EstudianteOutputDto dtoUser = new EstudianteOutputDto();
+        EstudianteOutputDto dtoUser = new EstudianteOutputDto(user);
         return dtoUser;
     }
-/*
-    //Get by Id
-    @GetMapping("/{id}")
-    public DTOUser findWithSpecs(@PathVariable String name, @PathVariable Date fechAlta,@PathVariable String email, @PathVariable String categoria,@PathVariable String ciudad) throws Exception {
-        User user = userPort.findById(id).orElseThrow(() -> new Exception("Not found"));
-        DTOUser dtoUser = new DTOUser(user);
-        return dtoUser;
-    }
-*/
-    public String chekName(String name){
-        if (name.equalsIgnoreCase(null)){
+
+    public String chekName(String name) {
+        if (name.equalsIgnoreCase(null)) {
             return "name";
         }
         return name;
     }
 
-    public boolean chekFech(Date fechAlta){
-        if (fechAlta==null){
+    public boolean chekFech(Date fechAlta) {
+        if (fechAlta == null) {
             return false;
         }
         return true;
     }
 
-    public boolean chekEmail(String email){
-        if (email.equalsIgnoreCase(null)){
+    public boolean chekEmail(String email) {
+        if (email.equalsIgnoreCase(null)) {
             return false;
         }
         return true;
     }
 
-    public boolean chekCategoria(String categoria){
-        if (categoria.equalsIgnoreCase(null)){
+    public boolean chekCategoria(String categoria) {
+        if (categoria.equalsIgnoreCase(null)) {
             return false;
         }
         return true;
     }
 
-    public boolean chekCiudad(String ciudad){
-        if (ciudad.equalsIgnoreCase(null)){
+    public boolean chekCiudad(String ciudad) {
+        if (ciudad.equalsIgnoreCase(null)) {
             return false;
         }
         return true;
