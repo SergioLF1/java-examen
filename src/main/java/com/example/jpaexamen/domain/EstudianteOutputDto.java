@@ -2,12 +2,8 @@ package com.example.jpaexamen.domain;
 
 import com.sun.istack.NotNull;
 import org.dom4j.Branch;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.Date;
 

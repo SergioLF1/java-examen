@@ -1,6 +1,5 @@
 package com.example.jpaexamen.infrastructure.controller;
 
-import com.example.jpaexamen.domain.DTOUser;
 import com.example.jpaexamen.domain.EstudianteInputDto;
 import com.example.jpaexamen.domain.User;
 import com.example.jpaexamen.infrastructure.repository.UserPort;
@@ -26,7 +25,7 @@ public class UserControllerPut {
         Optional<User> userData = userPort.findById(id);
         if (userData.isPresent()) {
             User user = userData.get();
-            user=new User(dtoUser);
+            user = new User(dtoUser);
             userPort.save(user);
             return new ResponseEntity<>(dtoUser, HttpStatus.OK);
         } else {
