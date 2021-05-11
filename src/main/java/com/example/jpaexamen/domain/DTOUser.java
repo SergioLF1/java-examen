@@ -25,20 +25,21 @@ public class DTOUser {
         this.comentarios = comentarios;
     }
 
-    public DTOUser(User user) {
-        id = user.getId();
-        name = user.getName();
-        fechAlta = user.getFechAlta();
-        email = user.getEmail();
-        categoria = definirCategoria(user.getCategoria());
-        ciudad = user.getCiudad();
-        comentarios = user.getComentarios();
-    }
-
-    public String definirCategoria(String c){
-        if (c.equalsIgnoreCase("front") || c.equalsIgnoreCase("back")){
+    /*
+        public DTOUser(User user) {
+            id = user.getId();
+            name = user.getName();
+            fechAlta = user.getFechAlta();
+            email = user.getEmail();
+            categoria = definirCategoria(user.getCategoria());
+            ciudad = user.getCiudad();
+            comentarios = user.getComentarios();
+        }
+    */
+    public String definirCategoria(String c) {
+        if (c.equalsIgnoreCase("front") || c.equalsIgnoreCase("back")) {
             return c;
-        }else {
+        } else {
             return "Sin definir";
         }
     }

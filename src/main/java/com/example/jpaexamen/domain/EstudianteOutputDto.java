@@ -9,7 +9,6 @@ import java.util.Date;
 
 public class EstudianteOutputDto {
     @Id
-
     @Column(name = "id")
     String id;
 
