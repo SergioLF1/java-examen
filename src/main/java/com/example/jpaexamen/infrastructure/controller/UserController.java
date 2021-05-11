@@ -1,6 +1,7 @@
 package com.example.jpaexamen.infrastructure.controller;
 
 import com.example.jpaexamen.domain.DTOUser;
+import com.example.jpaexamen.domain.EstudianteInputDto;
 import com.example.jpaexamen.domain.User;
 import com.example.jpaexamen.infrastructure.repository.UserPort;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class UserController {
 
     //Add
     @PostMapping("/add")
-    public User agregar(@RequestBody DTOUser dtoUser) {
+    public User agregar(@RequestBody EstudianteInputDto dtoUser) {
         User user = new User(dtoUser);
         return userPort.save(user);
     }
@@ -58,7 +59,7 @@ public class UserController {
 
     //Edit
     @PutMapping(value = "/edit/{id}")
-    public ResponseEntity<DTOUser> updateUser(@PathVariable("id") String id, @RequestBody DTOUser dtoUser) {
+    public ResponseEntity<EstudianteInputDto> updateUser(@PathVariable("id") String id, @RequestBody EstudianteInputDto dtoUser) {
         Optional<User> userData = userPort.findById(id);
         if (userData.isPresent()) {
             User user = userData.get();
