@@ -23,7 +23,7 @@ public class UserControllerPut {
         Optional<User> userData = userPort.findById(id);
         if (userData.isPresent()) {
             User user = userData.get();
-            user.convert(dtoUser);
+            user=new User(dtoUser);
             userPort.save(user);
             return new ResponseEntity<>(dtoUser, HttpStatus.OK);
         } else {

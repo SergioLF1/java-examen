@@ -7,5 +7,5 @@ import java.util.HashMap;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User,String> {
-     List<User> getData(HashMap<String, Object> conditions);
+     //List<User> getData(HashMap<String, Object> conditions);
 }
