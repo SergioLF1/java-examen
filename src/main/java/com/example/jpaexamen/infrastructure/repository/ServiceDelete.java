@@ -6,5 +6,5 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public interface ServiceDelete {
-    public void borrarUsuarioById(@PathVariable String id, HttpServletResponse response) throws IOException;
+     void borrarUsuarioById(String id, HttpServletResponse response) throws IOException;
 }

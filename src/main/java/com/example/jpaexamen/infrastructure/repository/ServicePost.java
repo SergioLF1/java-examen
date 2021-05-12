@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface ServicePost {
 
-    public User agregar(@RequestBody EstudianteInputDto dtoUser);
+     User agregar(EstudianteInputDto dtoUser);
 }

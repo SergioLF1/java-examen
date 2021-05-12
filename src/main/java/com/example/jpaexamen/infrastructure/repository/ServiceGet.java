@@ -8,5 +8,5 @@ import java.util.List;
 public interface ServiceGet {
      List<EstudianteOutputDto> getAllContacts();
 
-     EstudianteOutputDto getOneDto(@PathVariable String id) throws Exception;
+     EstudianteOutputDto getOneDto(String id) throws Exception;
 }

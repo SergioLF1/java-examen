@@ -18,16 +18,17 @@ import java.util.Optional;
 public class ImServicePut {
     @Autowired
     UserRepository userRepository;
-    public ResponseEntity updateUser(@PathVariable("id") String id, @RequestBody EstudianteInputDto dtoUser, HttpServletResponse response) throws IOException {
+    public Object updateUser(@PathVariable("id") String id, @RequestBody EstudianteInputDto dtoUser) throws IOException {
         Optional<User> userData = userRepository.findById(id);
         if (userData.isPresent()) {
             User user = userData.get();
             user = new User(dtoUser);
             userRepository.save(user);
-            return new ResponseEntity<>(dtoUser, HttpStatus.OK);
+            return user;
         } else {
-            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "No existe el registro");
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.status(401).build();
+            //response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "No existe el registro");
+            //return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 }
