@@ -5,6 +5,7 @@ import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -13,10 +14,10 @@ import java.util.Date;
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "estudiantes_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "uuid")
     @GenericGenerator(
-            name = "ausencias_seq",
-            strategy = "com.bosonit.staffit.shared.sequences.StringPrefixedSequenceIdGenerator",
+            name = "uuid",
+            strategy = "uuid2",
             parameters = {
                     @org.hibernate.annotations.Parameter(name = StringPrefixedSequenceIdGenerator.INCREMENT_PARAM, value = "1"),
                     @org.hibernate.annotations.Parameter(name = StringPrefixedSequenceIdGenerator.VALUE_PREFIX_PARAMETER, value = "EST"),

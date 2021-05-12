@@ -1,9 +1,10 @@
 package com.example.jpaexamen.domain;
 
-import java.util.Date;
+import lombok.Data;
 
+import java.util.Date;
+@Data
 public class EstudianteOutputDto {
-    String id;
     String surname;
     String company_email;
     String personal_email;
