@@ -2,7 +2,6 @@ package com.example.jpaexamen.domain;
 
 import com.sun.istack.NotNull;
 import lombok.Data;
-import org.dom4j.Branch;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -51,7 +50,7 @@ public class User {
 
     @NotNull
     @Column(name = "branch")
-    Branch branch;
+    branch branch;
 
     @NotNull
     @Column(name = "active")

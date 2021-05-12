@@ -1,7 +1,5 @@
 package com.example.jpaexamen.domain;
 
-import org.dom4j.Branch;
-
 import java.util.Date;
 
 public class EstudianteOutputDto {
@@ -10,9 +8,9 @@ public class EstudianteOutputDto {
     String company_email;
     String personal_email;
     String city;
-    double numHoursWeek;
+    int numHoursWeek;
     String coments;
-    Branch branch;
+    branch branch;
     boolean active;
     Date createdDate;
     Date terminationDate;
@@ -26,11 +24,11 @@ public class EstudianteOutputDto {
         this.coments = user.getComents();
         this.branch = user.getBranch();
         this.active = user.isActive();
+        this.createdDate = user.getCreatedDate();
         this.terminationDate = user.getTerminationDate();
     }
 
     public EstudianteOutputDto(User user) {
-
         this.surname = user.getSurname();
         this.personal_email = user.getPersonal_email();
         this.company_email = user.getCompany_email();
@@ -39,7 +37,7 @@ public class EstudianteOutputDto {
         this.coments = user.getComents();
         this.branch = user.getBranch();
         this.active = user.isActive();
+        this.createdDate = user.getCreatedDate();
         this.terminationDate = user.getTerminationDate();
-
     }
 }

@@ -1,7 +1,6 @@
 package com.example.jpaexamen.domain;
 
 import lombok.Data;
-import org.dom4j.Branch;
 
 import java.util.Date;
 
@@ -11,10 +10,10 @@ public class EstudianteSearchInputDto {
     String company_email;
     String personal_email;
     String city;
-    double numHoursWeek;
+    int numHoursWeek;
     String coments;
-    Branch branch;
+    branch branch;
     boolean active;
-    Date createDate;
+    Date createdDate;
     Date terminationDate;
 }
