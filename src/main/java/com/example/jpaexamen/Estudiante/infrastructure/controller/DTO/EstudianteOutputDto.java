@@ -12,7 +12,7 @@ public class EstudianteOutputDto {
     String city;
     int numHoursWeek;
     String coments;
-    com.example.jpaexamen.Estudiante.domain.branch branch;
+    com.example.jpaexamen.application.branch branch;
     boolean active;
     Date createdDate;
     Date terminationDate;

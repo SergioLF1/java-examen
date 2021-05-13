@@ -52,7 +52,7 @@ public class User {
 
     @NotNull
     @Column(name = "branch")
-    branch branch;
+    com.example.jpaexamen.application.branch branch;
 
     @NotNull
     @Column(name = "active")
