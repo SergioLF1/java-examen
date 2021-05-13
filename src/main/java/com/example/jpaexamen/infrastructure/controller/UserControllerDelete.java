@@ -4,7 +4,6 @@ import com.example.jpaexamen.infrastructure.repository.ServiceDelete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -16,8 +15,8 @@ public class UserControllerDelete {
 
     //Delete by Id
     @DeleteMapping(value = "/{id}")
-    public void borrarUsuarioById(@PathVariable String id, HttpServletResponse response) throws IOException {
-        serviceDelete.borrarUsuarioById(id, response);
+    public void borrarUsuarioById(@PathVariable String id) throws IOException {
+        serviceDelete.borrarUsuarioById(id);
     }
 
 }
