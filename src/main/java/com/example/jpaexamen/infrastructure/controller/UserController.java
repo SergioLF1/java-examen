@@ -1,7 +1,7 @@
 package com.example.jpaexamen.infrastructure.controller;
 
-import com.example.jpaexamen.domain.EstudianteInputDto;
-import com.example.jpaexamen.domain.EstudianteOutputDto;
+import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteInputDto;
+import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteOutputDto;
 import com.example.jpaexamen.domain.User;
 import com.example.jpaexamen.infrastructure.repository.UserPort;
 import org.springframework.beans.factory.annotation.Autowired;

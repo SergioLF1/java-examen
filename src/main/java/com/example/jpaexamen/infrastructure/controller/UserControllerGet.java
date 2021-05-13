@@ -1,6 +1,6 @@
 package com.example.jpaexamen.infrastructure.controller;
 
-import com.example.jpaexamen.domain.EstudianteOutputDto;
+import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteOutputDto;
 import com.example.jpaexamen.infrastructure.repository.ServiceGet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

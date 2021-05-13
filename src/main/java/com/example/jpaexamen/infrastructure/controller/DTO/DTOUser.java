@@ -1,4 +1,4 @@
-package com.example.jpaexamen.domain;
+package com.example.jpaexamen.infrastructure.controller.DTO;
 
 import lombok.Data;
 

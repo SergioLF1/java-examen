@@ -1,6 +1,6 @@
 package com.example.jpaexamen.infrastructure.services;
 
-import com.example.jpaexamen.domain.EstudianteOutputDto;
+import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteOutputDto;
 import com.example.jpaexamen.domain.User;
 import com.example.jpaexamen.infrastructure.repository.ServiceGet;
 import com.example.jpaexamen.infrastructure.repository.UserRepository;

@@ -1,6 +1,6 @@
 package com.example.jpaexamen.infrastructure.repository;
 
-import com.example.jpaexamen.domain.EstudianteOutputDto;
+import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteOutputDto;
 
 import java.util.List;
 

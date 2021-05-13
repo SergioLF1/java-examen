@@ -1,4 +1,4 @@
-package com.example.jpaexamen.domain;
+package com.example.jpaexamen.application;
 
 import org.hibernate.HibernateException;
 import org.hibernate.MappingException;

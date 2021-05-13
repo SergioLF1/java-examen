@@ -1,18 +1,19 @@
-package com.example.jpaexamen.domain;
+package com.example.jpaexamen.infrastructure.controller.DTO;
 
+import com.example.jpaexamen.domain.branch;
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-public class EstudianteInputDto {
+public class EstudianteSearchInputDto {
     String surname;
     String company_email;
     String personal_email;
     String city;
     int numHoursWeek;
     String coments;
-    branch branch;
+    com.example.jpaexamen.domain.branch branch;
     boolean active;
     Date createdDate;
     Date terminationDate;

@@ -1,11 +1,12 @@
 package com.example.jpaexamen.domain;
 
+import com.example.jpaexamen.application.StringPrefixedSequenceIdGenerator;
+import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteInputDto;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
