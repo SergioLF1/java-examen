@@ -1,6 +1,6 @@
-package com.example.jpaexamen.infrastructure.controller;
+package com.example.jpaexamen.Estudiante.infrastructure.controller;
 
-import com.example.jpaexamen.domain.User;
+import com.example.jpaexamen.Estudiante.domain.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

@@ -1,8 +1,6 @@
-package com.example.jpaexamen.infrastructure.controller.DTO;
+package com.example.jpaexamen.Estudiante.infrastructure.controller.DTO;
 
-import com.example.jpaexamen.domain.User;
-import com.example.jpaexamen.domain.branch;
-import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteSearchInputDto;
+import com.example.jpaexamen.Estudiante.domain.User;
 import lombok.Data;
 
 import java.util.Date;
@@ -14,7 +12,7 @@ public class EstudianteOutputDto {
     String city;
     int numHoursWeek;
     String coments;
-    com.example.jpaexamen.domain.branch branch;
+    com.example.jpaexamen.Estudiante.domain.branch branch;
     boolean active;
     Date createdDate;
     Date terminationDate;

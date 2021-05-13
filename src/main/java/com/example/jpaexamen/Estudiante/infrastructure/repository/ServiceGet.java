@@ -1,6 +1,6 @@
-package com.example.jpaexamen.infrastructure.repository;
+package com.example.jpaexamen.Estudiante.infrastructure.repository;
 
-import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteOutputDto;
+import com.example.jpaexamen.Estudiante.infrastructure.controller.DTO.EstudianteOutputDto;
 
 import java.util.List;
 

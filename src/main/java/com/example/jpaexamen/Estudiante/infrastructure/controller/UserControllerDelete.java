@@ -1,6 +1,6 @@
-package com.example.jpaexamen.infrastructure.controller;
+package com.example.jpaexamen.Estudiante.infrastructure.controller;
 
-import com.example.jpaexamen.infrastructure.repository.ServiceDelete;
+import com.example.jpaexamen.Estudiante.infrastructure.repository.ServiceDelete;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

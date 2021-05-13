@@ -1,4 +1,4 @@
-package com.example.jpaexamen.infrastructure.controller.DTO;
+package com.example.jpaexamen.Estudiante.infrastructure.controller.DTO;
 
 import lombok.Data;
 

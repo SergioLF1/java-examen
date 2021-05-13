@@ -1,7 +1,7 @@
-package com.example.jpaexamen.infrastructure.controller;
+package com.example.jpaexamen.Estudiante.infrastructure.controller;
 
-import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteInputDto;
-import com.example.jpaexamen.infrastructure.repository.ServicePut;
+import com.example.jpaexamen.Estudiante.infrastructure.controller.DTO.EstudianteInputDto;
+import com.example.jpaexamen.Estudiante.infrastructure.repository.ServicePut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

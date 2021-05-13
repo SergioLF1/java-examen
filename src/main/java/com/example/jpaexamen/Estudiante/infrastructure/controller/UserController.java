@@ -1,9 +1,9 @@
-package com.example.jpaexamen.infrastructure.controller;
+package com.example.jpaexamen.Estudiante.infrastructure.controller;
 
-import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteInputDto;
-import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteOutputDto;
-import com.example.jpaexamen.domain.User;
-import com.example.jpaexamen.infrastructure.repository.UserPort;
+import com.example.jpaexamen.Estudiante.infrastructure.controller.DTO.EstudianteInputDto;
+import com.example.jpaexamen.Estudiante.infrastructure.controller.DTO.EstudianteOutputDto;
+import com.example.jpaexamen.Estudiante.domain.User;
+import com.example.jpaexamen.Estudiante.infrastructure.repository.UserPort;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

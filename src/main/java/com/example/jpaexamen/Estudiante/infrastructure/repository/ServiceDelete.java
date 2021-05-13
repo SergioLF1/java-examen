@@ -1,4 +1,4 @@
-package com.example.jpaexamen.infrastructure.repository;
+package com.example.jpaexamen.Estudiante.infrastructure.repository;
 
 import java.io.IOException;
 

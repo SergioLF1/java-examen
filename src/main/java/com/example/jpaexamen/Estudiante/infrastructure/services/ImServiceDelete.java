@@ -1,8 +1,8 @@
-package com.example.jpaexamen.infrastructure.services;
+package com.example.jpaexamen.Estudiante.infrastructure.services;
 
-import com.example.jpaexamen.domain.User;
-import com.example.jpaexamen.infrastructure.repository.ServiceDelete;
-import com.example.jpaexamen.infrastructure.repository.UserRepository;
+import com.example.jpaexamen.Estudiante.domain.User;
+import com.example.jpaexamen.Estudiante.infrastructure.repository.ServiceDelete;
+import com.example.jpaexamen.Estudiante.infrastructure.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

@@ -1,7 +1,7 @@
-package com.example.jpaexamen.domain;
+package com.example.jpaexamen.Estudiante.domain;
 
 import com.example.jpaexamen.application.StringPrefixedSequenceIdGenerator;
-import com.example.jpaexamen.infrastructure.controller.DTO.EstudianteInputDto;
+import com.example.jpaexamen.Estudiante.infrastructure.controller.DTO.EstudianteInputDto;
 import com.sun.istack.NotNull;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
